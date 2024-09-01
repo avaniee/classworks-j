@@ -1,0 +1,18 @@
+def calculate_average(scores):
+    return sum(scores) / len(scores)
+    
+scores = []
+
+
+for i in range(10):
+    while True:
+        try:
+            score = float(input(f"Score for student {i + 1}: "))
+            scores.append(score)
+            break
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
+
+
+average = calculate_average(scores)
+print(f"The average score of the 5 students is: {average:.2f}")
